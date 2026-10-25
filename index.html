@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="engine.js" defer></script>
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="dropdown-container">
+        <label for="metalPicker">Choose a metal:</label>
+        <select id="metalPicker" class="metals-dropdown">
+            <button>
+                <selectedcontent></selectedcontent>
+            </button>
+
+            <option value="iron">Iron</option>
+            <option value="aluminum">Aluminum</option>
+            <option value="copper">Copper</option>
+            <option value="lead">Lead</option>
+            <option value="silver">Silver</option>
+        </select>
+    </div>
     
+
+    <div class="slider-container">
+        <label for="massPicker">Choose a mass:</label>
+        <p id="massDisplay">Metal mass: <span id="massValue">0.10</span> kg</p>
+        <input type="range" id="massPicker" min="0.02" max="0.5" step="0.02" value="0.10">
+    </div>
+    
+    <button id="startBtn">Start</button>
+    <p id="result"></p>
+    
+    <div class="chart-box"><canvas id="tempChart"></canvas></div>
+    <div class="chart-box"><canvas id="heatChart"></canvas></div>
+    
+    
+
 </body>
 </html>

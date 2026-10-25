@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.metals-dropdown{
+    border-radius: 5px;
+    border: none;
+    background: #f1f1f1;
+    padding: 5px;
+    transition: 0.4s;
+}
+
+.metals-dropdown:hover,
+.metals-dropdown:focus {
+    background: #e7e7e7;
+}
+
+.chart-box {
+    width: 600px;
+    height: 350px;
+}
